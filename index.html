@@ -16,34 +16,51 @@
     <main>
         <h2>Seleziona una Relazione</h2>
         <ul>
-            <li><a href="./Relazioni.html/Moto_Rettilineo_Uniformemente_Accelerato.html.html">Relazione 1: Moto Rettilineo Uniformemente Accelerato</a></li>
-            <li><a href="./Relazioni.html/Moto_Rettilineo_Uniformemente_Accelerato.html.html">Relazione 2: Studio della caduta libera</a></li>
+        <li><a href="./Relazioni.html/Moto_Rettilineo_Uniformemente_Accelerato.html.html"><div id="Relazione">
+                 1: Moto Rettilineo Uniformemente Accelerato
+                </div>
+            </a>
+        </li>
+        <li><a href="./Relazioni.html/Moto_Rettilineo_Uniformemente_Accelerato.html.html"><div id="Relazione">
+                 2: Studio della caduta libera
+                </div>
+            </a>
+        </li>
         </ul>
     </main>
     <main>
-        <header>Prove Pratiche:</header>
         <h2>Seleziona una Prova:</h2>
         <ul>
             <script src ="./Prove.js/MRUA.js">calcolaMRUA()</script>
-            <li><a href ="javascript:calcolaMRUA()">Prova 1: Moto_Rettilineo_Uniformemente_Accelerato</a></li>
+        <li><a href ="javascript:calcolaMRUA()"><div id="Relazione"> 
+                1: Moto_Rettilineo_Uniformemente_Accelerato
+                </div>
+            </a>
+        </li>
          </ul>
     </main>
     <main>
         <h2>Simulazione Moto Rettilineo Uniforme</h2>
-        <label for="posizioneFotocellula1">Distanza Fotocellula (px):</label>
+        <label for="posizioneFotocellula1">
+            <div id="CellulaNominale"> Distanza Fotocellula (px):
+        </div>
+    </label>
         <input type="number" id="posizioneFotocellula1" value="450" min="0" max="500">
         <div id="binario1">
             <div id="quadrato1"></div>
             <div id="fotocellula1"></div>
         </div>
-        <div id="metro1">Distanza percorsa: <span id="distanza1">0</span> px</div>
+        <div id="metro1"> Distanza percorsa: <span id="distanza1">0</span> px</div>
         <div id="cronometro1">Tempo: <span id="tempo1">0.00</span> s</div>
         <button id="start1">Inizia</button>
     </main>
 
     <main>
         <h2>Simulazione Moto Rettilineo Uniformemente Accelerato</h2>
-        <label for="posizioneFotocellula2">Distanza Fotocellula (px):</label>
+        <label for="posizioneFotocellula2">
+            <div id="CellulaNominale1"> Distanza Fotocellula (px):
+        </div>
+        </label>
         <input type="number" id="posizioneFotocellula2" value="450" min="0" max="500">
         <div id="binario2">
             <div id="quadrato2"></div>
@@ -54,7 +71,7 @@
         <button id="start2">Inizia</button>
     </main>
 
-    <footer>
+    <footer id="NominaleCognomi">
         <p>Progetto creato da Sicali Riccardo, Juanbautista Dinaccio</p>
     </footer>
 
