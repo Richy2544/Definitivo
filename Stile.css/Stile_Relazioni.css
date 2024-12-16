@@ -33,6 +33,31 @@ a:hover {
     color: #005f99;
 }
 
+#start1 {
+    margin-top: 20px;
+    font-size: large;
+}
+
+#start2 {
+    margin-top: 20px;
+    font-size: large;
+}
+
+#CellulaNominale, #posizioneFotocellula1 {
+    font-size: large;
+}
+
+#CellulaNominale1, #posizioneFotocellula2 {
+    font-size: large;
+}
+
+#NominaleCognomi {
+    font-size: large;
+}
+
+#Relazione {
+    font-size: large;
+}
 /* Copertina */
 #copertina {
     background-image: url(../Immagini/DALL·E\ 2024-12-03\ 09.28.53\ -\ A\ dynamic\ and\ modern\ cover\ image\ with\ a\ scientific\ theme\ focused\ on\ physics\,\ incorporating\ elements\ like\ formulas\,\ a\ glowing\ atom\,\ abstract\ representa.jpg); /* Sostituisci con il percorso corretto */
@@ -45,7 +70,7 @@ a:hover {
     color: white;
     font-size: 7rem;
     font-weight: bold;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5); /* Aggiunge un'ombra al testo */
     margin-bottom: 20px;
 }
 
@@ -77,7 +102,7 @@ a:hover {
 
 #metro1, #cronometro1 {
     margin-top: 10px;
-    font-size: 16px;
+    font-size: large;
 }
 
 /* Stili per la seconda simulazione (MRUA) */
@@ -108,5 +133,5 @@ a:hover {
 
 #metro2, #cronometro2 {
     margin-top: 10px;
-    font-size: 16px;
+    font-size: large;
 }
