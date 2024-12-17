@@ -135,3 +135,58 @@ a:hover {
     margin-top: 10px;
     font-size: large;
 }
+/* Stili generali qui sopra */
+
+/* Media query per dispositivi mobili */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+        margin: 0;
+        padding: 0;
+    }
+    #copertina {
+        text-align: center;
+        font-size: 2rem;
+        padding: 20px;
+        height: auto;
+    }
+    h1, h2 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    ul {
+        padding: 0;
+    }
+    li {
+        margin: 10px auto;
+        width: 90%;
+    }
+    #Relazione {
+        padding: 10px;
+        font-size: 1rem;
+        text-align: center;
+    }
+    input[type="number"] {
+        width: 80%;
+        margin: 10px auto;
+        display: block;
+    }
+    #binario1, #binario2 {
+        width: 100%;
+    }
+    #quadrato1, #quadrato2 {
+        width: 20px;
+        height: 20px;
+    }
+    button {
+        margin: 10px auto;
+        display: block;
+        padding: 10px;
+        font-size: 1rem;
+    }
+    footer {
+        font-size: 0.9rem;
+        text-align: center;
+        padding: 10px;
+    }
+}
