@@ -3,7 +3,7 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 20px;
-    background: linear-gradient(to right, #808080, #bfa58d);
+    background: linear-gradient(to right, #808080, #a28d6e, #bfa58d);
 }
 header {
     text-align: center;
@@ -16,12 +16,16 @@ header {
 section {
     margin: 20px 0;
     padding: 20px;
-    background-color: white;
+    background-color: linear-gradient(to right, #808080, #bfa58d);
     border: 1px solid #ddd;
     border-radius: 5px;
 }
+
 h1, h2 {
-    color: #007acc;
+    color: #2c3e50;
+}
+p {
+    color: black;
 }
 table {
     width: 100%;
@@ -36,7 +40,7 @@ th, td {
     text-align: center;
 }
 .conclusioni {
-    background-color: #e7f4ff;
+    background: linear-gradient(to right, #808080, #a28d6e, #bfa58d);
 }
 img {
     max-width: 100%;
@@ -44,14 +48,15 @@ img {
     margin: 0 auto;
 }
 .rettangolo-blu {
-    background-color: #007acc; /* Colore di sfondo blu */
-    color: white; /* Colore del testo bianco */
+    background-color: linear-gradient(to right, #e0e0e0, #2c3e50); /* Colore di sfondo blu */
+    color: #2c3e50; /* Colore del testo bianco */
     text-align: center; /* Centra il testo orizzontalmente */
     padding: 40px; /* Distanza tra il testo e i bordi del rettangolo */
     font-size: 100px; /* Grandezza del testo */
     font-weight: bold; /* Grassetto per il testo */
     letter-spacing: 2px; /* Distanza tra le lettere per maggiore leggibilità */
     text-transform: uppercase; /* Trasforma il testo in maiuscolo */
+    border: 1px solid #ddd;
 }/* Stile per la copertina */
 .cover {
     position: relative;
