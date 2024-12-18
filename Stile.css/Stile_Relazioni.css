@@ -1,27 +1,45 @@
-/* Stile generale */
+/*===== GOOGLE FONTS =====*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+/*===== VARIABLES CSS =====*/
+:root {
+    /* Colors */
+    --first-color: #F2A20C;
+    --white-color: #E9EAEC;
+    --dark-color: #272D40;
+    --dark-color-lighten: #F2F5FF;
+
+    /* Typography */
+    --body-font: 'Poppins', sans-serif;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: 0.875rem;
+
+    /* Transitions */
+    --transition-speed: 0.5s;
+    --hover-shadow: 0 18px 40px -12px rgba(242, 162, 12, 0.35);
+}
+
+/*===== BASE =====*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
     background: linear-gradient(to right, #808080, #bfa58d);
     color: black;
-    text-align: center; /* Centra tutto il testo */
-}
-
-ul {
-    list-style: none;
-    padding: 0;
-}
-
-#titolo {
-    font-size: xx-large;
-    color: firebrick;
-}
-
-/* Centra ogni elemento della lista */
-ul li {
-    margin: 10px 0;
     text-align: center;
+}
+
+h1, p {
+    margin: 0;
 }
 
 a {
@@ -33,34 +51,129 @@ a:hover {
     color: #005f99;
 }
 
-#start1 {
-    margin-top: 20px;
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 10px 0;
+    text-align: center;
+}
+
+/*===== CARD =====*/
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    position: relative;
+    width: 320px;
+    height: 400px;
+    background-color: var(--dark-color);
+    border-radius: 1rem;
+    padding: 4rem 2rem 0;
+    color: var(--white-color);
+    overflow: hidden;
+    transition: var(--transition-speed);
+}
+
+.card__img {
+    position: absolute;
+    width: 260px;
+    filter: drop-shadow(5px 10px 15px rgba(8, 9, 13, 0.4));
+    transition: var(--transition-speed);
+}
+
+.card__data {
+    transform: translateY(13.2rem);
+    text-align: center;
+    transition: var(--transition-speed);
+}
+
+.card__title {
+    font-size: var(--h1-font-size);
+    color: var(--first-color);
+    margin-bottom: 0.5rem;
+    transition: var(--transition-speed);
+}
+
+.card__price {
+    display: inline-block;
+    font-size: var(--h2-font-size);
+    font-weight: 500;
+    margin-bottom: 1.25rem;
+    transition: var(--transition-speed);
+}
+
+.card__description {
+    font-size: var(--small-font-size);
+    text-align: initial;
+    margin-bottom: 1.25rem;
+    opacity: 0;
+    transition: var(--transition-speed);
+}
+
+.card__button {
+    display: block;
+    width: max-content;
+    padding: 1.125rem 2rem;
+    background-color: var(--first-color);
+    color: var(--white-color);
+    border-radius: 0.5rem;
+    font-weight: 600;
+    transition: var(--transition-speed);
+    opacity: 0;
+}
+
+.card__button:hover {
+    box-shadow: var(--hover-shadow);
+}
+
+/* Hover card effect */
+.card:hover .card__img {
+    transform: translate(-1.5rem, -9.5rem) rotate(-20deg);
+}
+
+.card:hover .card__data {
+    transform: translateY(4.8rem);
+}
+
+.card:hover .card__title {
+    transform: translateX(-2.3rem);
+    margin-bottom: 0;
+}
+
+.card:hover .card__price {
+    transform: translateX(-6.8rem);
+}
+
+.card:hover .card__description,
+.card:hover .card__button {
+    transition-delay: 0.2s;
+    opacity: 1;
+}
+
+/* Specific styles */
+#titolo {
+    font-size: xx-large;
+    color: firebrick;
+}
+
+#start1, #start2, #CellulaNominale, #posizioneFotocellula1, #CellulaNominale1, #posizioneFotocellula2, #NominaleCognomi, #Relazione {
     font-size: large;
 }
 
-#start2 {
-    margin-top: 20px;
-    font-size: large;
-}
-
-#CellulaNominale, #posizioneFotocellula1 {
-    font-size: large;
-}
-
-#CellulaNominale1, #posizioneFotocellula2 {
-    font-size: large;
-}
-
-#NominaleCognomi {
-    font-size: large;
-}
-
-#Relazione {
-    font-size: large;
-}
-/* Copertina */
 #copertina {
-    background-image: url(../Immagini/DALL·E\ 2024-12-03\ 09.28.53\ -\ A\ dynamic\ and\ modern\ cover\ image\ with\ a\ scientific\ theme\ focused\ on\ physics\,\ incorporating\ elements\ like\ formulas\,\ a\ glowing\ atom\,\ abstract\ representa.jpg); /* Sostituisci con il percorso corretto */
+    background-image: url(../Immagini/DALL·E\ 2024-12-03\ 09.28.53\ -\ A\ dynamic\ and\ modern\ cover\ image\ with\ a\ scientific\ theme\ focused\ on\ physics\,\ incorporating\ elements\ like\ formulas\,\ a\ glowing\ atom\,\ abstract\ representa.jpg);
     background-size: cover;
     background-position: center;
     height: 1000px;
@@ -70,43 +183,11 @@ a:hover {
     color: white;
     font-size: 7rem;
     font-weight: bold;
-    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5); /* Aggiunge un'ombra al testo */
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
     margin-bottom: 20px;
 }
 
-/* Stili per la prima simulazione (MRU) */
-#binario1 {
-    position: relative;
-    width: 1000px;
-    height: 50px;
-    background-color: #ddd;
-    margin: 20px auto;
-    border: 1px solid #999;
-}
-
-#quadrato1 {
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    background-color: red;
-    top: 10px;
-}
-
-#fotocellula1 {
-    position: absolute;
-    width: 2px;
-    height: 50px;
-    background-color: black;
-    right: 50px;
-}
-
-#metro1, #cronometro1 {
-    margin-top: 10px;
-    font-size: large;
-}
-
-/* Stili per la seconda simulazione (MRUA) */
-#binario2 {
+#binario1, #binario2 {
     position: relative;
     width: 1000px;
     height: 50px;
@@ -115,15 +196,15 @@ a:hover {
     border: 1px solid #888;
 }
 
-#quadrato2 {
+#quadrato1, #quadrato2 {
     position: absolute;
     width: 30px;
     height: 30px;
-    background-color: blue;
+    background-color: red;
     top: 10px;
 }
 
-#fotocellula2 {
+#fotocellula1, #fotocellula2 {
     position: absolute;
     width: 2px;
     height: 50px;
@@ -131,59 +212,60 @@ a:hover {
     right: 50px;
 }
 
-#metro2, #cronometro2 {
+#metro1, #metro2, #cronometro1, #cronometro2 {
     margin-top: 10px;
     font-size: large;
 }
-/* Stili generali qui sopra */
 
-/* Media query per dispositivi mobili */
+/* Media query for mobile */
 @media (max-width: 768px) {
     body {
         font-size: 14px;
-        margin: 0;
-        padding: 0;
     }
+
     #copertina {
         text-align: center;
         font-size: 2rem;
         padding: 20px;
         height: auto;
     }
+
     h1, h2 {
         font-size: 1.5rem;
-        text-align: center;
     }
-    ul {
-        padding: 0;
-    }
-    li {
+
+    ul li {
         margin: 10px auto;
         width: 90%;
     }
+
     #Relazione {
         padding: 10px;
         font-size: 1rem;
-        text-align: center;
     }
+
     input[type="number"] {
         width: 80%;
         margin: 10px auto;
         display: block;
     }
+
     #binario1, #binario2 {
         width: 100%;
     }
+
     #quadrato1, #quadrato2 {
         width: 20px;
         height: 20px;
     }
+
     button {
         margin: 10px auto;
         display: block;
         padding: 10px;
         font-size: 1rem;
     }
+
     footer {
         font-size: 0.9rem;
         text-align: center;
